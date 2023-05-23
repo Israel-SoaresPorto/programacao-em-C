@@ -14,6 +14,8 @@ int main()
         printf("nome de usuario: ");
         gets(usuario);
 
+        fflush(stdin);
+
         printf("senha: ");
         gets(senha);
 
