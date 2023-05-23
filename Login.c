@@ -8,22 +8,21 @@ int main()
     char senha[20];
     char usuarioRegistrado[] = "user123";
     char senhaRegistrada[] = "123456";
-    bool acesso;
 
-    while (acesso == 0)
+    while (true)
     {
         printf("nome de usuario: ");
-        scanf("%s", usuario);
+        gets(usuario);
 
         printf("senha: ");
-        scanf("%s", senha);
+        gets(senha);
 
         int validarUsuario = strcmp(usuario, usuarioRegistrado);
         int validarSenha = strcmp(senha, senhaRegistrada);
 
         if(validarUsuario == 0 && validarSenha == 0) {
             printf("acesso validado, seja bem-vindo \n");
-            acesso = 1;
+            break;
         } else {
             printf("usuario ou senha invalidos \n");
         }
