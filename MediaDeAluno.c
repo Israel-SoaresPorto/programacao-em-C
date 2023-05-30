@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main()
 {
+    setlocale(LC_ALL, "");
     //variaveis
     char nomeDoAluno[20];
     int idade, i;
@@ -29,7 +31,7 @@ int main()
     // saida de dados do programa
     printf("nome do aluno: %s \n", nomeDoAluno);
     printf("idade: %d \n", idade);
-    printf("media: %.1f \n", media);
+    printf("média: %.1f \n", media);
 
     if(media > 7) {
         printf("aluno(a) esta aprovado");

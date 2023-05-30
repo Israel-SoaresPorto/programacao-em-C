@@ -1,16 +1,19 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main()
 {
+    setlocale(LC_ALL, "");
+
     // variÃ¡veis
     int numero1, numero2, soma, produto;
     float media;
 
     //entrada de dados
-    printf("digite o primeiro numero: ");
+    printf("digite o primeiro número: ");
     scanf("%d", &numero1);
 
-    printf("digite o segundo numero: ");
+    printf("digite o segundo número: ");
     scanf("%d", &numero2);
 
     soma = numero1 + numero2;
@@ -20,7 +23,7 @@ int main()
     //saida de dados
     printf("soma: %d \n", soma);
     printf("produto: %d \n", produto);
-    printf("media: %.2f \n", media);
+    printf("média: %.2f \n", media);
 
     if(numero1 > numero2) {
         printf("maior valor: %d \n", numero1);
@@ -29,7 +32,7 @@ int main()
         printf("maior valor: %d \n", numero2);
         printf("menor valor: %d \n", numero1);
     } else {
-        printf("os dois numeros sao iguais");
+        printf("os dois numeros são iguais");
     }
 
     return 0;

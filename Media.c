@@ -1,26 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 int main()
 {
+    setlocale(LC_ALL, "");
+
     float media = 0;
 
     do {
-        printf("digite a sua media: ");
+        printf("digite a sua média: ");
         scanf("%f", &media);
     } while(media < 0 || media > 10);
 
     if (media >= 7)
     {
-        printf("voce esta aprovado.");
+        printf("você está aprovado.");
     }
     else if (media >= 5)
     {
-        printf("voce esta em recuperacao.");
+        printf("você está em recuperação.");
     }
     else
     {
-        printf("vocer esta reprovado.");
+        printf("você está reprovado.");
     }
     
     return 0;

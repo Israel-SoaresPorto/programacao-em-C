@@ -11,7 +11,7 @@ int main()
     float mediaDosPares;
 
     do {
-        printf("digite um nÃºmero: ");
+        printf("digite um número: ");
         scanf("%d", &numero);
 
         fflush(stdin);
@@ -26,9 +26,9 @@ int main()
 
     mediaDosPares = somaDePares / pares;
 
-    printf("quantidade de nÃºmeros pares: %d\n", pares);
-    printf("quantidade de nÃºmeros impares: %d\n", impares);
-    printf("mÃ©dia dos pares: %.2f", mediaDosPares);
+    printf("quantidade de números pares: %d\n", pares);
+    printf("quantidade de números impares: %d\n", impares);
+    printf("média dos pares: %.2f", mediaDosPares);
    
     return 0;
 }

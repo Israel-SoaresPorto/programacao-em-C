@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <locale.h>
 
 int main()
 {
+    setlocale(LC_ALL, "");
+
     char resposta[3];
     float nota, somaDasNotas, media;
     int contador = 0;
@@ -25,7 +28,7 @@ int main()
 
     media = somaDasNotas / contador;
 
-    printf("media: %.1f", media);
+    printf("média: %.1f", media);
 
     return 0;
 }
