@@ -4,12 +4,12 @@
 int main()
 {
     setlocale(LC_ALL, "");
-    //variaveis
+    // variaveis
     char nomeDoAluno[20];
     int idade, i;
     float nota, somaDasNotas, media;
 
-    //entrada de dados do usuÃ¡rio
+    // entrada de dados do usuário
     printf("insira o seu nome: ");
     scanf("%s", nomeDoAluno);
 
@@ -33,11 +33,14 @@ int main()
     printf("idade: %d \n", idade);
     printf("média: %.1f \n", media);
 
-    if(media > 7) {
+    if (media > 7)
+    {
         printf("aluno(a) esta aprovado");
-    } else {
+    }
+    else
+    {
         printf("aluno(a) esta reprovado");
     }
-    
+
     return 0;
 }
