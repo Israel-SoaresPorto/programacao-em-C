@@ -23,14 +23,15 @@ int main()
             printf("%d nota: ", j + 1);
             scanf("%f", &notas[i][j]);
 
-            somaDasNotas += notas[i][j] * peso[i];
-            somaDosPesos += peso[i];
+            somaDasNotas += notas[i][j] * peso[j];
+            somaDosPesos += peso[j];
 
             fflush(stdin);
         }
 
         medias[i] = somaDasNotas / somaDosPesos;
         somaDasNotas = 0;
+        somaDosPesos = 0;
 
         fflush(stdin);
 
