@@ -1,39 +1,60 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
+#include <time.h>
 
 int main()
 {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese");
 
-    // variÃ¡veis
-    int numero1, numero2, soma, produto;
-    float media;
+    // variáveis
+    int numero1, numero2, soma, diferenca, produto, quiocente, operacao;
 
-    //entrada de dados
-    printf("digite o primeiro número: ");
-    scanf("%d", &numero1);
+    // entrada de dados
+    do {
+        printf("digite o primeiro número: ");
+        scanf("%d", &numero1);
 
-    printf("digite o segundo número: ");
-    scanf("%d", &numero2);
+        printf("digite o segundo número: ");
+        scanf("%d", &numero2);
 
-    soma = numero1 + numero2;
-    produto = numero1 * numero2;
-    media = soma / 2;
+        printf("operação correspondente \n");
+        printf("1 - adição \n");
+        printf("2 - subtração \n");
+        printf("3 - muçltiplicação \n");
+        printf("4 - divisão \n");
+        printf("0 - sair do programa \n");
+        printf("> ");
+        scanf("%d", &operacao);
 
-    //saida de dados
-    printf("soma: %d \n", soma);
-    printf("produto: %d \n", produto);
-    printf("média: %.2f \n", media);
+        switch (operacao) {
+        case 1:
+            soma = numero1 + numero2;
+            printf("%d + %d = %d \n", numero1, numero2, soma);
+            break;
+        case 2:
+            diferenca = numero1 - numero2;
+            printf("%d - %d = %d \n", numero1, numero2, diferenca);
+            break;
+        case 3:
+            produto = numero1 * numero2;
+            printf("%d * %d = %d \n", numero1, numero2, produto);
+            break;
+        case 4:
+            quiocente = numero1 / numero2;
+            printf("%d / %d = %d \n", numero1, numero2, quiocente);
+            break;
+        case 0:
+            printf("saindo...");
+            break;
+        default:
+            printf("valor inválido");
+            break;
+        }
 
-    if(numero1 > numero2) {
-        printf("maior valor: %d \n", numero1);
-        printf("menor valor: %d \n", numero2);
-    } else if(numero2 < numero1) {
-        printf("maior valor: %d \n", numero2);
-        printf("menor valor: %d \n", numero1);
-    } else {
-        printf("os dois numeros são iguais");
-    }
+        sleep(3);
+        system("cls");
+    } while (operacao != 0);
 
     return 0;
 }

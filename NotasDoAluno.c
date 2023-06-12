@@ -1,12 +1,28 @@
 #include <stdio.h>
 #include <locale.h>
 
+void media(float somaDasNotas)
+{
+    float media = somaDasNotas / 4;
+
+    printf("média: %.2f \n", media);
+
+    if(media >= 7) {
+        printf("aluno está aprovado.");
+    } else if(media >= 5) {
+        printf("aluno está em recuperação");
+    } else {
+        printf("aluno está reprovado");
+    }
+
+}
+
 int main()
 {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese");
 
     int i;
-    float notas[4], somaDasNotas, media;
+    float notas[4], somaDasNotas;
 
     for (i = 0; i < 4; i++)
     {
@@ -18,22 +34,7 @@ int main()
         somaDasNotas += notas[i];
     }
 
-    media = somaDasNotas / i;
+    media(somaDasNotas);
 
-    for (i = 0; i < 4; i++)
-    {
-        printf("%dª nota: %.2f \n", i + 1, notas[i]);
-    }
-
-    printf("média: %.2f \n", media);
-
-    if(media >= 7) {
-        printf("aluno está aprovado.");
-    } else if(media >= 5) {
-        printf("aluno está em recuperação");
-    } else {
-        printf("aluno está reprovado");
-    }   
-    
     return 0;
 }
