@@ -2,38 +2,65 @@
 #include <stdlib.h>
 #include <locale.h>
 
-struct Ficha
+typedef struct Ficha
 {
     char nome[100];
     int idade;
     float peso;
     float altura;
-};
+    char endereco[100];
+} Pessoa;
+
+void exibirInformacoes(Pessoa p[]) 
+{
+    int i;
+
+    for (i = 0; i < 5; i++)
+    {
+        printf("ficha da pessoa n° %d \n", i + 1);
+        printf("nome: %s\n", p[i].nome);
+        printf("idade: %d\n", p[i].idade);
+        printf("peso: %.2f\n", p[i].peso);
+        printf("altura: %.2f\n", p[i].altura);
+        printf("endereço: %s \n\n",p[i].endereco);
+    }
+    
+}
 
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
 
-    struct Ficha pessoa;
+    struct Ficha pessoas[5];
+    int i;
 
-    printf("digite o seu nome: ");
-    gets(pessoa.nome);
+    for (i = 0; i < 5; i++)
+    {
+        printf("pessoa n° %d \n", i + 1);
 
-    printf("digite a sua idade: ");
-    scanf("%d", &pessoa.idade);
+        printf("digite o seu nome: ");
+        gets(pessoas[i].nome);
 
-    printf("digite o seu peso: ");
-    scanf("%f", &pessoa.peso);
+        printf("digite a sua idade: ");
+        scanf("%d", &pessoas[i].idade);
 
-    printf("digite a sua altura: ");
-    scanf("%f", &pessoa.altura);
+        printf("digite o seu peso: ");
+        scanf("%f", &pessoas[i].peso);
+
+        printf("digite a sua altura: ");
+        scanf("%f", &pessoas[i].altura);
+
+        fflush(stdin);
+
+        printf("digite o seu endereço: ");
+        gets(pessoas[i].endereco);
+
+        fflush(stdin);
+    }
 
     system("cls");
 
-    printf("nome: %s\n", pessoa.nome);
-    printf("idade: %d\n", pessoa.idade);
-    printf("peso: %.2f\n", pessoa.peso);
-    printf("altura: %.2f\n", pessoa.altura);
-    
+    exibirInformacoes(pessoas);
+
     return 0;
 }
