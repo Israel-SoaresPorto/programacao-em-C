@@ -3,7 +3,7 @@
 
 int main()
 {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "portuguese");
 
     int pares[6], count = 0, numero, i;
 

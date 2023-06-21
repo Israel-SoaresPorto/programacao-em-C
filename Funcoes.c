@@ -22,7 +22,7 @@ void calcularMedia(int n[])
 
 int main()
 {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "portuguese");
 
     int numeros[10], i;
     for (i = 0; i < 10; i++)

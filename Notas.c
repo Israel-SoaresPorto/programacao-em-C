@@ -5,7 +5,7 @@
 
 int main()
 {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "portuguese");
 
     char resposta[3];
     float nota, somaDasNotas, media;

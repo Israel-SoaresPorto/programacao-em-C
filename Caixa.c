@@ -55,7 +55,7 @@ int main()
         }
 
         sleep(7);
-        system("cls");
+        system("cls || clear");
     } while (opcao != 0);
     
     return 0;

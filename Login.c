@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <locale.h>
 
 int main()
 {
+    setlocale(LC_ALL, "portuguese");
+
     char usuario[20];
     char senha[20];
     char usuarioRegistrado[] = "user123";

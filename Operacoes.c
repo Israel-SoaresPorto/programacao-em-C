@@ -53,7 +53,7 @@ int main()
         }
 
         sleep(3);
-        system("cls");
+        system("cls || clear");
     } while (operacao != 0);
 
     return 0;

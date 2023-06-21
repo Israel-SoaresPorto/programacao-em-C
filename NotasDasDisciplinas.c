@@ -85,7 +85,7 @@ int main()
         printf("\n");
     }
 
-    system("cls");
+    system("cls || clear");
 
     do {
         printf("digite uma opção: \n");
@@ -123,7 +123,7 @@ int main()
         }
 
         sleep(3);
-        system("cls");
+        system("cls || clear");
     } while (opcao != 0);
 
     return 0;

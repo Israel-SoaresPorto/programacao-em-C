@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 int main()
 {
+    setlocale(LC_ALL, "portuguese");
 
     int numero, pares = 0, impares = 0;
     int somaDePares; 

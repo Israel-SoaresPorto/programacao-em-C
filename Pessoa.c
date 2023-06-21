@@ -4,7 +4,7 @@
 
 int main()
 {
-    setlocale(LC_ALL,"");
+    setlocale(LC_ALL,"portuguese");
 
     char nomes[5][20];
     int idades[5], i;

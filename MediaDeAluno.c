@@ -3,7 +3,7 @@
 
 int main()
 {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "portuguese");
     // variaveis
     char nomeDoAluno[20];
     int idade, i;
@@ -26,7 +26,7 @@ int main()
 
     media = somaDasNotas / i;
 
-    system("cls");
+    system("cls || clear");
 
     // saida de dados do programa
     printf("nome do aluno: %s \n", nomeDoAluno);

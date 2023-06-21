@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
 int main()
 {
+    setlocale(LC_ALL, "portuguese");
+
     int numeroDeFilhos, somaFilhos, mediaFilhos, familias = 0;
     float salario, somaSalarios, mediaSalarios;
 
@@ -26,6 +29,8 @@ int main()
 
     mediaFilhos = somaFilhos / familias;
     mediaSalarios = somaSalarios / familias;
+
+    system("cls || clear");
 
     printf("quantidade de familias que responderan a pesquisa: %d\n", familias);
     printf("media de filhos por familia: %d\n", mediaFilhos);

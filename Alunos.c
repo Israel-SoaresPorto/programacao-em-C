@@ -102,7 +102,7 @@ int main()
         fflush(stdin);
     }
 
-    system("cls");
+    system("cls || clear");
 
     printf("maior nota da primeira prova: %.1f \n", maiorNotaPrimeiraProva(alunos));
     printf("maior média entre os alunos: %.1f \n", maiorMedia(mediasDosAlunos));

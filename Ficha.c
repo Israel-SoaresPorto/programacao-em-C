@@ -58,7 +58,7 @@ int main()
         fflush(stdin);
     }
 
-    system("cls");
+    system("cls || clear");
 
     exibirInformacoes(pessoas);
 
